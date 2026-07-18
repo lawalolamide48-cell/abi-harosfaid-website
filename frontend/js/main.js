@@ -112,9 +112,25 @@ async function renderServices(selector, options = {}) {
     )
     .join('');
   initWipeReveal();
+}
 
-  // Also populate any service <select> dropdowns on the page
-  document.querySelectorAll('select[data-service-select]').forEach((select) => {
+/* ---------- Dynamic: service <select> dropdowns (quote/booking forms) ---------- */
+async function populateServiceSelects() {
+  const selects = document.querySelectorAll('select[data-service-select]');
+  if (!selects.length) return;
+
+  let services = FALLBACK_SERVICES;
+  try {
+    const fetched = await api.getServices();
+    if (fetched && fetched.length) services = fetched;
+  } catch (e) {
+    console.warn('Using fallback services - backend not reachable:', e.message);
+  }
+
+  const params = new URLSearchParams(location.search);
+  const preselect = params.get('service');
+
+  selects.forEach((select) => {
     const placeholder = select.querySelector('option[value=""]');
     select.innerHTML = '';
     if (placeholder) select.appendChild(placeholder);
@@ -124,8 +140,6 @@ async function renderServices(selector, options = {}) {
       opt.textContent = s.name;
       select.appendChild(opt);
     });
-    const params = new URLSearchParams(location.search);
-    const preselect = params.get('service');
     if (preselect) select.value = preselect;
   });
 }
@@ -479,6 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initWhatsApp();
   initWipeReveal();
   renderServices('[data-services-grid]', { limit: window.SERVICES_LIMIT });
+  populateServiceSelects();
   renderTestimonials('[data-testimonials-grid]');
   renderGallery('[data-gallery-grid]');
   renderGalleryCarousel('[data-gallery-carousel]');
