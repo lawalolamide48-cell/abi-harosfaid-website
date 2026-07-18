@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | ABI Harosfaid Limited</title>
+<meta name="description" content="Request a free quote, book a cleaning, or send a message to ABI Harosfaid Limited in Lagos.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <nav class="container nav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="ABI Harosfaid Limited">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html#quote" class="btn btn-outline btn-sm">Get a Quote</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu"></button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow">Get In Touch</span>
+      <h1>Let's get your space cleaned</h1>
+      <p>Request a free quote, book a cleaning directly, or just send us a message — whichever is easiest for you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+
+      <aside class="contact-info-card wipe-reveal">
+        <h3>Contact Details</h3>
+        <ul class="contact-list">
+          <li><span class="icon-inline" data-icon="phone"></span><span>0803 516 0287</span></li>
+          <li><span class="icon-inline" data-icon="mail"></span><span>harosfaidnigerialimited@gmail.com</span></li>
+          <li><span class="icon-inline" data-icon="map-pin"></span><span>Lagos, Nigeria</span></li>
+          <li><span class="icon-inline" data-icon="clock"></span><span>Mon – Sat, 8am – 6pm</span></li>
+        </ul>
+        <div class="whatsapp-numbers">
+          <a href="#" class="btn btn-whatsapp btn-block" id="wa-primary">
+            <span class="icon-inline" data-icon="whatsapp" style="color:#fff"></span>WhatsApp: 0803 516 0287
+          </a>
+          <a href="#" class="btn btn-outline btn-block" id="wa-secondary">
+            <span class="icon-inline" data-icon="whatsapp"></span>WhatsApp: 0916 031 8713
+          </a>
+        </div>
+      </aside>
+
+      <div class="wipe-reveal">
+        <div class="form-tabs">
+          <button type="button" class="form-tab active" data-target="quote">Get a Quote</button>
+          <button type="button" class="form-tab" data-target="booking">Book a Cleaning</button>
+          <button type="button" class="form-tab" data-target="message">Send a Message</button>
+        </div>
+
+        <!-- Quote request -->
+        <div class="form-panel active" id="quote">
+          <form id="quote-form">
+            <div class="field-grid">
+              <div class="field">
+                <label for="q-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="q-name" name="name" required>
+              </div>
+              <div class="field">
+                <label for="q-phone">Phone Number <span class="req">*</span></label>
+                <input type="tel" id="q-phone" name="phone" required>
+              </div>
+              <div class="field">
+                <label for="q-email">Email</label>
+                <input type="email" id="q-email" name="email">
+              </div>
+              <div class="field">
+                <label for="q-service">Service Needed <span class="req">*</span></label>
+                <select id="q-service" name="serviceType" required data-service-select>
+                  <option value="">Select a service</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="q-property">Property Type</label>
+                <select id="q-property" name="propertyType">
+                  <option value="Residential">Residential</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="q-date">Preferred Date</label>
+                <input type="date" id="q-date" name="preferredDate">
+              </div>
+              <div class="field full">
+                <label for="q-address">Address / Area <span class="req">*</span></label>
+                <input type="text" id="q-address" name="address" required placeholder="e.g. Lekki Phase 1, Lagos">
+              </div>
+              <div class="field full">
+                <label for="q-message">Anything else we should know?</label>
+                <textarea id="q-message" name="message" placeholder="Size of space, specific concerns, etc."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Request Free Quote</button>
+            <div class="form-status"></div>
+          </form>
+        </div>
+
+        <!-- Booking -->
+        <div class="form-panel" id="booking">
+          <form id="booking-form">
+            <div class="field-grid">
+              <div class="field">
+                <label for="b-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="b-name" name="name" required>
+              </div>
+              <div class="field">
+                <label for="b-phone">Phone Number <span class="req">*</span></label>
+                <input type="tel" id="b-phone" name="phone" required>
+              </div>
+              <div class="field">
+                <label for="b-email">Email</label>
+                <input type="email" id="b-email" name="email">
+              </div>
+              <div class="field">
+                <label for="b-service">Service Needed <span class="req">*</span></label>
+                <select id="b-service" name="serviceType" required data-service-select>
+                  <option value="">Select a service</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="b-address">Address <span class="req">*</span></label>
+                <input type="text" id="b-address" name="address" required>
+              </div>
+              <div class="field">
+                <label for="booking-date">Date <span class="req">*</span></label>
+                <input type="date" id="booking-date" name="scheduledDate" required>
+              </div>
+              <div class="field full">
+                <label>Time Slot <span class="req">*</span></label>
+                <div class="slot-options"></div>
+              </div>
+              <div class="field full">
+                <label for="b-notes">Notes</label>
+                <textarea id="b-notes" name="notes" placeholder="Anything our team should know before arriving"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Book This Slot</button>
+            <div class="form-status"></div>
+          </form>
+        </div>
+
+        <!-- Message -->
+        <div class="form-panel" id="message">
+          <form id="contact-form">
+            <div class="field-grid">
+              <div class="field">
+                <label for="c-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="c-name" name="name" required>
+              </div>
+              <div class="field">
+                <label for="c-email">Email</label>
+                <input type="email" id="c-email" name="email">
+              </div>
+              <div class="field">
+                <label for="c-phone">Phone Number</label>
+                <input type="tel" id="c-phone" name="phone">
+              </div>
+              <div class="field">
+                <label for="c-subject">Subject</label>
+                <input type="text" id="c-subject" name="subject" placeholder="General Inquiry">
+              </div>
+              <div class="field full">
+                <label for="c-message">Message <span class="req">*</span></label>
+                <textarea id="c-message" name="message" required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            <div class="form-status"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/logo.png" alt="ABI Harosfaid Limited"></div>
+        <p>Professional cleaning &amp; facility management services across Lagos, Nigeria.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Office &amp; Commercial Cleaning</a></li>
+          <li><a href="services.html">Residential Cleaning</a></li>
+          <li><a href="services.html">Deep Cleaning</a></li>
+          <li><a href="services.html">Post-Construction Cleanup</a></li>
+          <li><a href="services.html">Fumigation &amp; Pest Control</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul class="contact-list">
+          <li><span class="icon-inline" data-icon="phone"></span>0803 516 0287</li>
+          <li><span class="icon-inline" data-icon="mail"></span>harosfaidnigerialimited@gmail.com</li>
+          <li><span class="icon-inline" data-icon="map-pin"></span>Lagos, Nigeria</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> ABI Harosfaid Limited. All rights reserved.</span>
+      <span><a href="../admin/login.html">Staff Login</a></span>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="whatsapp-float" data-whatsapp aria-label="Chat with us on WhatsApp">
+  <span class="icon-inline" data-icon="whatsapp" style="width:26px;height:26px;color:#fff;margin:0"></span>
+</a>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Page-specific: wire up the two distinct WhatsApp numbers in the contact info card
+  document.addEventListener('DOMContentLoaded', () => {
+    const primary = document.getElementById('wa-primary');
+    const secondary = document.getElementById('wa-secondary');
+    if (primary) { primary.href = buildWhatsAppLink(COMPANY.whatsappPrimary); primary.target = '_blank'; primary.rel = 'noopener'; }
+    if (secondary) { secondary.href = buildWhatsAppLink(COMPANY.whatsappSecondary); secondary.target = '_blank'; secondary.rel = 'noopener'; }
+  });
+</script>
+</body>
+</html>
